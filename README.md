@@ -54,11 +54,35 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 **Branch**: game-structure
 
 **Acceptance Criteria**
+```css
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 610px;
+  margin: 0 auto;
+}
+```
+
 
 - Can see a page with a three-by-three grid board game
 - Can see a question mark in each square
 - Can click on any of the question marks and see an alert with the index position of that question mark in the array
 - Can click on any of the question marks and a tree emoji appears instead of the alert
+    - create a function on App.js
+    - pass it as a prop to Square.js
+    - perform the function call on Square.js
+    - Pseudocode:
+    - input: index of the clicked square, parameter called id
+    - output: alert message with the id
+    - name of function: handleClick
+
+    -Can click on any of the question marks and a umbrella emoki appears instead of the aler
+    -Ctrl + command + space bar
+    "🌂"
+    -Use handleClick function to update the value of the clicked square to the default emoji
+    -reassign the value to the emoji
+    -update the state variable with its setter function
+
 
 **Story 2**: In order to play the treasure hunt game, as the user of the application, I should be able to see a winning square and a losing square.
 
@@ -66,8 +90,16 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 **Acceptance Criteria**
 
-- Can select the random winning square and the question mark will become a treasure emoji
+- Can select the random winning square and the question mark will become a treasure emoji "🏴‍☠️"
+-Math.random(): outputs a random number < 1
+-multiply Math.random() by the amount of options necessary for the game: `board.length`
+-Math.floor(): rounds down to the nearest whole number
+- conditional statements to cover iff the tresure location is selected and for the default emoji
+
 - Can select the random losing square and the question mark will become a bomb emoji
+- add an additional conditional statement
+
+
 
 **Story 3**: In order to play the treasure hunt game, as the user of the application, I should be able to restart the game at any time.
 
